@@ -2,6 +2,9 @@
 
 import random
 
+from PIL import Image
+
+
 
 def diceroller():
     roll20 = random.randint(1, 20)
@@ -43,4 +46,4 @@ def rollagain():
         print('Have a nice day!')
 
 
-rollagain()
+##rollagain()
