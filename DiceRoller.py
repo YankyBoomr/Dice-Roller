@@ -1,7 +1,7 @@
 # This is a Dice roller
 
 import random
-
+import PIL
 from PIL import Image
 
 
