@@ -1,8 +1,11 @@
 # This is a Dice roller
 
 import random
-import PIL
-from PIL import Image
+import tkinter as tk
+
+
+from PIL import Image, ImageTk
+
 
 
 
@@ -33,6 +36,7 @@ def diceroller():
 
 
 
+
 diceroller()
 
 
@@ -48,3 +52,8 @@ def rollagain():
 
 
 #rollagain()
+
+def d20():
+    x1 = random.randint(1, 20)
+
+    val1 = tk.Label(window, text=float(x1))
