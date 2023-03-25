@@ -20,10 +20,15 @@ def d100():
 def d20():
     x1 = random.randint(1, 20)
 
-    #image1 = Image.open("d20.png")
-    #dice = ImageTk.PhotoImage(image1)
+    image1 = tk.PhotoImage(file = "d20bit.png")
+    imageLabel.configure(image = image1)
+    imageLabel.image = image1
+
     label1 = tk.Label(root, text=x1, font=80)
     canvas1.create_window(200, 150, window=label1)
+
+    if x1 == 20:
+        label1 = tk.Label(font=100, fg='green')
 
 
 def d12():
@@ -86,5 +91,8 @@ button6_window = canvas1.create_window(10, 250, anchor=NW, window=button6)
 # Close Button
 btn = tk.Button(root, text='Close', bd='5', command=root.destroy)
 btn.pack(side='top')
+
+imageLabel = tk.Label(root)
+imageLabel.pack(side=tk.LEFT)
 
 root.mainloop()
